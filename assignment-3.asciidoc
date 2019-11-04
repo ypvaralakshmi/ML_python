@@ -1,0 +1,110 @@
+
+
++*In[1]:*+
+[source, ipython3]
+----
+#Task 1 - Q1
+#Write a function to compute 5/0 and use try/except to catch the exceptions. 
+
+def compute(x):
+    try:
+        a=x/0
+    except:
+        print("unable to divide {} by 0".format(x))
+
+val=int(input("enter an integer"))
+compute(val)
+
+----
+
+
++*Out[1]:*+
+----
+enter an integer123
+unable to divide 123 by 0
+----
+
+
++*In[6]:*+
+[source, ipython3]
+----
+#Task 1 - Q2
+#Implement a Python program to generate all sentences where subject is in ["Americans", "Indians"] and verb is in ["Play", "watch"] and the object is in ["Baseball","cricket"]. 
+subjects=["Americans","Indians"] 
+verbs=["play","watch"] 
+objects=["Baseball","Cricket"] 
+
+for i in subjects:
+    for j in verbs:
+        for k in objects:
+            print(i+" "+j+" "+k)
+    
+----
+
+
++*Out[6]:*+
+----
+Americans play Baseball
+Americans play Cricket
+Americans watch Baseball
+Americans watch Cricket
+Indians play Baseball
+Indians play Cricket
+Indians watch Baseball
+Indians watch Cricket
+----
+
+
++*In[57]:*+
+[source, ipython3]
+----
+#Task 2:  Q1
+
+def out_vec(list1,increasing=False,n=len(list1)):
+    input_vector=list1
+    out_vector=[]
+    if increasing==True:
+        for i in list1:
+            list2=[]
+            for j in range(0,n):
+                list2.append(i**j)
+            out_vector.append(list2)
+    else:
+        for i in list1:
+            list2=[]
+            for j in range(0,n):
+                power=n-j-1
+                list2.append(i**power)
+            out_vector.append(list2)
+    print(out_vector)
+
+list1=[1,2,3,5]
+out_vec(list1,increasing=True)
+#out_vec(list1,increasing=True)
+out_vec(list1,n=3)
+#out_vec(list1,increasing=False)
+
+
+        
+----
+
+
++*Out[57]:*+
+----
+[[1, 1, 1, 1], [1, 2, 4, 8], [1, 3, 9, 27], [1, 5, 25, 125]]
+[[1, 1, 1], [4, 2, 1], [9, 3, 1], [25, 5, 1]]
+----
+
+
++*In[ ]:*+
+[source, ipython3]
+----
+
+----
+
+
++*In[ ]:*+
+[source, ipython3]
+----
+
+----
